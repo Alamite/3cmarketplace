@@ -4,7 +4,7 @@ import "./Navbar.css";
 const NavBar = () => {
   return (
     <nav className="navbar">
-      <h2 style={{ color: "white" }}>3C CCTPL</h2>
+      <h2 style={{ color: "white" }}>3C CTPL</h2>
       <div>
         <a href="#home">Home</a>
         <a href="#marketplace">Market Place</a>
