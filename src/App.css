@@ -1,38 +1,109 @@
-.App {
+/* src/App.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.app {
+  font-family: 'Raleway';
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.section {
+  position: relative;
+  background-color: transparent;
+  height: 100vh;
+  width: 100%;
+}
+
+.vanta-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.landing-section-content {
+  background-color: transparent; /* Adjusted to transparent */
+  padding: 80px 10px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Distribute space evenly */
+  align-items: center;
+  height: 100%;
+  color: white; /* Adjusted to white */
+  text-align: center;
+  align-content: center;
+}
+
+.section-content {
+  background-color: White;
+  padding: 80px 10px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: black;
+  text-align: center;
+  /* align-content: center; */
+}
+
+.content {
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: black;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Market Place Styles */
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  padding: 20px;
+  max-width: 70%;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card {
+  background-color: #f0f0f0;
+  max-width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
+.demo-btn-primary {
+  border-radius: 18px !important;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: white !important;
+  border-color:#134B70 !important;
+  color: #134B70 !important;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.demo-btn-primary:hover {
+  color: white !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  background-color: #134B70 !important;
+  border-color:#134B70 !important;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
