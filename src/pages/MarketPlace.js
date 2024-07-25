@@ -16,12 +16,12 @@ const MarketPlace = () => {
     imgRefs.current.forEach((img, index) => {
       if (img && img.complete) {
         // Ensure the image is loaded
-        const color = colorThief.getColor(img);
-        colorsMap[index] = color;
+        const palette = colorThief.getPalette(img, 5); // Get a palette of 5 colors
+        colorsMap[index] = palette[1] || [0, 0, 0]; // Use the second color as the secondary color
       } else if (img) {
         img.addEventListener("load", () => {
-          const color = colorThief.getColor(img);
-          colorsMap[index] = color;
+          const palette = colorThief.getPalette(img, 5);
+          colorsMap[index] = palette[1] || [0, 0, 0];
           setColors({ ...colorsMap }); // Update state after loading
         });
       }
@@ -39,8 +39,8 @@ const MarketPlace = () => {
       <h1>Explore our products</h1>
       <div className="card-container">
         {items.map((item, index) => {
-          const dominantColor = colors[index] || [0, 0, 0];
-          const colorString = `${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]}`;
+          const secondaryColor = colors[index] || [0, 0, 0];
+          const colorString = `${secondaryColor[0]}, ${secondaryColor[1]}, ${secondaryColor[2]}`;
           const boxShadowStyle = {
             boxShadow: `0 4px 8px rgba(0, 0, 0, 0.2)`,
             transition: "box-shadow 0.3s ease-in-out",
@@ -69,7 +69,7 @@ const MarketPlace = () => {
                         width="80px"
                         alt="Icon"
                         crossOrigin="anonymous"
-                        style={{borderRadius:"12px"}}
+                        style={{ borderRadius: "12px" }}
                       />
                     </div>
                   </Col>
