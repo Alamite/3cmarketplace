@@ -69,6 +69,7 @@ const MarketPlace = () => {
                         width="80px"
                         alt="Icon"
                         crossOrigin="anonymous"
+                        style={{borderRadius:"12px"}}
                       />
                     </div>
                   </Col>

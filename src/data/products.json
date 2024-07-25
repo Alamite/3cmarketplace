@@ -3,21 +3,21 @@
       "id": 1,
       "title": "Inscribe",
       "description": "Speech to Text",
-      "icon": "/images/inscibe.png",
+      "icon": "/images/inscribe.png",
       "link": "https://inscribe.3cctpl.co.in/"
     },
     {
       "id": 2,
       "title": "TMI Dashboard",
-      "description": "Description for Item 2",
+      "description": "Infringement dashboard",
       "icon": "/images/tmi.png",
       "link": "https://example.com/demo2"
     },
     {
       "id": 3,
       "title": "Keyword Variation",
-      "description": "Description for Item 3",
-      "icon": "/images/image.png",
+      "description": "Keyword variations",
+      "icon": "/images/keyword.png",
       "link": "https://example.com/demo3"
     }
   ]
