@@ -169,3 +169,16 @@ html, body {
 .touch-btn-primary:hover .lottie-container {
   opacity: 1; /* Make the animation visible on hover */
 }
+
+
+
+/* Contact Us styles */
+
+.get-in-touch-container{
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Adjust the height based on your design needs */
+  padding: 30px 50px;
+  border-radius: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}

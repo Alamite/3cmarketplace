@@ -5,7 +5,7 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import VantaBackground from "./components/VantaBackground";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Footer from "./components/Footer.js";
 import "./App.css";
 import MarketPlace from "./pages/MarketPlace";
 
@@ -26,6 +26,7 @@ const App = () => {
           </div>
           <div className="section" id="contact">
             <ContactUs />
+            <Footer/>
           </div>
         </div>
       </div>
