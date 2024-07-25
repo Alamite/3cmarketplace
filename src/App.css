@@ -47,12 +47,12 @@ html, body {
 
 .section-content {
   background-color: White;
-  padding: 80px 10px;
+  padding: 150px 20px 10px 20px;
   position: relative;
   z-index: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   height: 100%;
   color: black;
   text-align: center;
@@ -88,6 +88,10 @@ html, body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.card:hover{
+  box-shadow: 0 12px 16px rgba(var(--card-color), 0.6);
+  transition: all 0.3s ease;
+}
 
 .demo-btn-primary {
   border-radius: 18px !important;
@@ -106,4 +110,62 @@ html, body {
   background-color: #134B70 !important;
   border-color:#134B70 !important;
 
+}
+
+/* About Us Styles */
+
+.image-container {
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Adjust the height based on your design needs */
+  border-radius: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Allows absolute positioning inside */
+  overflow: hidden; /* Ensures no overflow of the image outside the container */
+}
+
+.responsive-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire container while maintaining aspect ratio */
+  display: block; /* Removes the gap below the image */
+}
+
+.touch-btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border: 3px solid white;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 24px;
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+  width: 150px; /* Initial width */
+  overflow: hidden; /* Hide overflow to initially hide animation */
+  position: relative; /* Position relative for Lottie placement */
+  cursor: pointer;
+}
+
+.touch-btn-primary:hover {
+  width: 200px; /* Expanded width */
+  padding-right: 45px;
+  border-color: black;
+  color: grey;
+  background-color: white; /* Optional darker color on hover */
+}
+
+.lottie-container {
+  position: absolute; /* Absolute positioning to avoid affecting layout */
+  right: 25px; /* Adjust position to place animation */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center adjustment */
+  width: 40px; /* Fixed width for Lottie animation */
+  height: 40px; /* Fixed height for Lottie animation */
+  opacity: 0; /* Initially hide the animation */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.touch-btn-primary:hover .lottie-container {
+  opacity: 1; /* Make the animation visible on hover */
 }

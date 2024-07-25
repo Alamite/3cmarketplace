@@ -21,12 +21,12 @@ const App = () => {
           <div className="section" id="marketplace">
             <MarketPlace />
           </div>
-          {/* <div className="section" id="about">
+          <div className="section" id="about">
             <AboutUs />
           </div>
           <div className="section" id="contact">
             <ContactUs />
-          </div> */}
+          </div>
         </div>
       </div>
     </VantaBackground>

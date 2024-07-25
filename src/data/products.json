@@ -3,21 +3,21 @@
       "id": 1,
       "title": "Inscribe",
       "description": "Speech to Text",
-      "icon": "../data/tempLogo.jpg",
+      "icon": "/images/inscibe.png",
       "link": "https://inscribe.3cctpl.co.in/"
     },
     {
       "id": 2,
       "title": "TMI Dashboard",
       "description": "Description for Item 2",
-      "icon": "/data/tempLogo.jpg",
+      "icon": "/images/tmi.png",
       "link": "https://example.com/demo2"
     },
     {
       "id": 3,
       "title": "Keyword Variation",
       "description": "Description for Item 3",
-      "icon": "C:\\Users\\Adi\\Work\\3cmarketplace\\src\\data\\tempLogo.jpg",
+      "icon": "/images/image.png",
       "link": "https://example.com/demo3"
     }
   ]

@@ -1,46 +1,50 @@
 /* NavBar.css */
+/* NavBar.css */
 
 .navbar {
-    position: fixed !important;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .navbar a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-  }
+  position: fixed !important;
+  padding-left: 10px !important;
+  justify-content: center;
+  width: calc(100% - 15px); /* Adjust width to account for scrollbar */
+  top: 0;
+  left: 0;
+  z-index: 10; /* Ensure it's above other content but not too high */
+  background-color: black;
+  box-sizing: border-box; /* Include padding and border in the element's width and height */
+  overflow-x: hidden; /* Ensure no horizontal overflow */
+}
 
-  .navbar a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: gray;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease;
-  }
-  
-  .navbar a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-  
-  .navbar a:hover {
-    color: gray;
-  }
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  position: relative; /* Needed for the underline effect */
+  display: inline-block; /* Ensure pseudo-element aligns correctly */
+}
 
-  .nav-link {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-  }
+.navbar a::after {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  left: 50%; /* Center the underline horizontally */
+  width: 0%; /* Initial width of the underline (hidden) */
+  height: 2px;
+  background-color: #9acafc;
+  transform: translateX(-50%); /* Center align the underline */
+  transition: width 0.3s ease; /* Smooth transition for width */
+}
+
+.navbar a:hover::after {
+  width: 80%; /* Adjust this value for the desired underline length */
+}
+
+.navbar a:hover {
+  color: #9acafc;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
