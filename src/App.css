@@ -112,6 +112,24 @@ html, body {
 
 }
 
+
+/* MOdal Dialog */
+
+.modal {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.modal-dialog {
+  position: relative;
+  max-width: none !important;
+  width: 60% !important;
+  margin: var(--bs-modal-margin);
+  pointer-events: none;
+}
+
+
 /* About Us Styles */
 
 .image-container {

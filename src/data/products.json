@@ -3,22 +3,43 @@
       "id": 1,
       "title": "Inscribe",
       "description": "Speech to Text",
+      "long_description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "icon": "/images/inscribe.png",
-      "link": "https://inscribe.3cctpl.co.in/"
+      "link": "https://inscribe.3cctpl.co.in/",
+      "images": [
+      "/images/inscribe/login.png",
+      "/images/inscribe/summary.png",
+      "/images/inscribe/transcript.png",
+      "/images/inscribe/trend.png"
+    ]
     },
     {
       "id": 2,
       "title": "TMI Dashboard",
       "description": "Infringement dashboard",
+      "long_description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "icon": "/images/tmi.png",
-      "link": "https://example.com/demo2"
+      "link": "https://example.com/demo2",
+      "images": [
+      "/images/inscribe/login.png",
+      "/images/inscribe/summary.png",
+      "/images/inscribe/transcript.png",
+      "/images/inscribe/trend.png"
+    ]
     },
     {
       "id": 3,
       "title": "Keyword Variation",
       "description": "Keyword variations",
+      "long_description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "icon": "/images/keyword.png",
-      "link": "https://example.com/demo3"
+      "link": "https://example.com/demo3",
+      "images": [
+      "/images/inscribe/login.png",
+      "/images/inscribe/summary.png",
+      "/images/inscribe/transcript.png",
+      "/images/inscribe/trend.png"
+    ]
     }
   ]
   

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Modal, Button, Carousel } from "react-bootstrap"; // Import Carousel
 import { PlayFill } from "react-bootstrap-icons";
 import ColorThief from "colorthief";
 import items from "../data/products.json";
@@ -8,6 +8,8 @@ import "../App.css";
 const MarketPlace = () => {
   const [colors, setColors] = useState({});
   const imgRefs = useRef([]);
+  const [showModal, setShowModal] = useState(false);
+  const [currentItem, setCurrentItem] = useState(null);
 
   useEffect(() => {
     const colorThief = new ColorThief();
@@ -34,6 +36,16 @@ const MarketPlace = () => {
     window.open(link, "_blank");
   };
 
+  const handleCardClick = (item) => {
+    setCurrentItem(item);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setCurrentItem(null);
+  };
+
   return (
     <div className="section-content" style={{ display: "block" }}>
       <h1>Explore Our Products</h1>
@@ -58,6 +70,7 @@ const MarketPlace = () => {
               onMouseLeave={(e) =>
                 (e.currentTarget.style.boxShadow = `0 4px 8px rgba(0, 0, 0, 0.2)`)
               }
+              onClick={() => handleCardClick(item)} // Open modal on card click
             >
               <Container fluid>
                 <Row>
@@ -85,7 +98,10 @@ const MarketPlace = () => {
                     >
                       <button
                         className="demo-btn-primary"
-                        onClick={() => handleDemoClick(item.link)}
+                        onClick={(e) => {
+                          e.stopPropagation(); // Prevent card click event
+                          handleDemoClick(item.link);
+                        }}
                       >
                         <PlayFill /> Demo
                       </button>
@@ -97,6 +113,62 @@ const MarketPlace = () => {
           );
         })}
       </div>
+
+      {/* Modal */}
+      <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header style={{display:"flex", justifyContent:"space-between"}}>
+          <Modal.Title>
+            <div style={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
+            <div style={{display:"flex", alignItems:"center"}}>
+
+            <img
+            src={currentItem?.icon}
+            alt="Product"
+            style={{ width: "100%", borderRadius: "12px", marginRight:"10px" }}
+          /> 
+          <span style={{whiteSpace:"nowrap"}}>{currentItem?.title}</span>
+            </div>
+         
+              </div>
+              </Modal.Title>
+              <button
+                        className="demo-btn-primary"
+                        onClick={(e) => {
+                          e.stopPropagation(); // Prevent card click event
+                          handleDemoClick(currentItem?.link);
+                        }}
+                      >
+                        <PlayFill /> Demo
+                      </button>
+        </Modal.Header>
+        <Modal.Body>
+          <div style={{fontSize:"22px"}}>Description</div>
+          <p>{currentItem?.long_description}</p>
+          <Carousel>
+            {currentItem?.images.map((image, index) => (
+              <Carousel.Item key={index}>
+                <img
+                  className="d-block w-100"
+                  src={image}
+                  alt={`Slide ${index}`}
+                  style={{ height:"60vh",objectFit: "cover",borderRadius: "12px" }}
+                />
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </Modal.Body>
+        {/* <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModal}>
+            Close
+          </Button>
+          <Button
+            variant="primary"
+            onClick={() => handleDemoClick(currentItem.link)}
+          >
+            <PlayFill /> Demo
+          </Button>
+        </Modal.Footer> */}
+      </Modal>
     </div>
   );
 };
