@@ -21,10 +21,9 @@
       "icon": "/images/tmi.png",
       "link": "https://tmi.3cctpl.co.in/",
       "images": [
-      "/images/inscribe/login.png",
-      "/images/inscribe/summary.png",
-      "/images/inscribe/transcript.png",
-      "/images/inscribe/trend.png"
+      "/images/tmi/login.png",
+      "/images/tmi/vertical.png",
+      "/images/tmi/social.png"
     ]
     },
     {
