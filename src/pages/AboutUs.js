@@ -48,6 +48,13 @@ const AboutUs = () => {
     lottieRef.current?.goToAndStop(RightArrowAni.op, true); // Set to the end frame
   };
 
+  const handleDemoClick = (selector) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" }); // Smoothly scroll to the element
+    }
+  };
+  
   return (
     <div className="section-content">
       <Container fluid>
@@ -88,6 +95,7 @@ const AboutUs = () => {
                   className="touch-btn-primary"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
+                  onClick={() => handleDemoClick("#contact")}
                 >
                   <div>
                   Get in touch

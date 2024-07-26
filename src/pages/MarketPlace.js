@@ -36,7 +36,7 @@ const MarketPlace = () => {
 
   return (
     <div className="section-content" style={{ display: "block" }}>
-      <h1>Explore our products</h1>
+      <h1>Explore Our Products</h1>
       <div className="card-container">
         {items.map((item, index) => {
           const secondaryColor = colors[index] || [0, 0, 0];
